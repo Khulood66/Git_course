@@ -17,11 +17,33 @@
 6-git reset head .\tstrecet.txt ==  git restore --staged .\tstrecet.txt
 اذا بغيت برجع الملف untracked
 
+-SSH
+7- ssh key من خلاله اقدر ارفع واوصل للريبو من غير مايطلب مني لوقن ولا حتى بريميشن 
+/n
+وعشان اقدر انشاء كي جديد ادخل على التيرمنل من المكان الي بغيت تشتغل فيه وتكتب الامر الي ينشا كي ويخزنه بحيث تقدر تستعمله في اي مكان 
+
+ssh-keygen -t rsa -b 4096 -C "[Email repo]"
+/n بعدها تدخل باسورد 
+تحط الامر دا عشان تنسخ الكي الببلك الي منشا 
+cat ~/.ssh/id_rsa.pub
+بعدها تروح ع القيت هب وتحط الكي حقك 
+
+تحط الامر دا عشان تتاكد انه تعرف ع الكي الي عندك وفادر يدخلك بدون اي مشاكل 
+ssh -T git@github.com
+
+
+الحين تكون قادر انك تسوي بوش على الريبو 
+git remote add origin git@github.com:Khulood-2000/Test.git
+
+git push origin main
+
+
 # باختصار انه في عندي 4 ديريكتوريز 
 1-Working directory والي هو اشتغل فيه في الvscode 
 2-Staging directory [git add]
 3-Local directory [git commit]
 4-Remote directory in github website [git push]
+
 
 
 
